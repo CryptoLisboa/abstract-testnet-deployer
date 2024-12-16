@@ -1,0 +1,61 @@
+{
+  "name": "abstract-testnet-farm",
+  "version": "1.0.0",
+  "description": "A tool for deploying and verifying multiple smart contracts on Abstract Chain testnet",
+  "author": "CryptoLisboa",
+  "license": "MIT",
+  "keywords": [
+    "blockchain",
+    "smart-contracts",
+    "abstract-chain",
+    "zksync",
+    "ethereum",
+    "hardhat",
+    "solidity"
+  ],
+  "scripts": {
+    "clean": "pnpm hardhat clean",
+    "compile": "pnpm hardhat compile",
+    "deploy": "pnpm hardhat deploy-zksync --script deploy.ts --network abstractTestnet",
+    "deploy:dry": "pnpm hardhat deploy-zksync --script deploy.ts --network abstractTestnet --dry-run",
+    "verify": "pnpm hardhat verify --network abstractTestnet",
+    "format": "prettier --write \"**/*.{ts,js,sol,json,md}\"",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "test": "pnpm hardhat test"
+  },
+  "devDependencies": {
+    "@matterlabs/hardhat-zksync": "^1.3.0",
+    "@matterlabs/hardhat-zksync-verify": "^1.3.0",
+    "@matterlabs/zksync-contracts": "^0.6.1",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=18.0.0",
+    "chai": "^4.2.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "ethers": "^6.13.4",
+    "hardhat": "^2.22.17",
+    "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^3.0.0",
+    "prettier-plugin-solidity": "^1.3.1",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.3.0",
+    "typescript": ">=4.5.0",
+    "zksync-ethers": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
